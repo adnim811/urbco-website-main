@@ -1,83 +1,150 @@
-import Image from "next/image";
+import Link from "next/link";
+import ElectricBorder from "@/components/ElectricBorder";
+import FuzzyText from "@/components/FuzzyText";
 
 export default function StudentsPage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-16 md:py-24">
-      <header className="max-w-3xl">
-        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">For Students</h1>
-        <p className="mt-4 text-muted">
-          Our club offers three main opportunities for students: hands-on client projects, professional development, and a welcoming calendar of social events.
-        </p>
-      </header>
-      <section className="mt-12 grid md:grid-cols-3 gap-6">
-        <div className="rounded-2xl border border-white/10 p-6 bg-white/5">
-          <div className="text-lg font-semibold">Client Projects</div>
-          <p className="mt-2 text-sm text-muted">Work with real organizations on urban tech challenges—build portfolios through research, strategy, and implementation.</p>
-        </div>
-        <div className="rounded-2xl border border-white/10 p-6 bg-white/5">
-          <div className="text-lg font-semibold">Professional Development</div>
-          <p className="mt-2 text-sm text-muted">Level up with workshops, mentorship, resume and portfolio reviews, and recruiting prep tailored to urban technology careers.</p>
-        </div>
-        <div className="rounded-2xl border border-white/10 p-6 bg-white/5">
-          <div className="text-lg font-semibold">Social Events</div>
-          <p className="mt-2 text-sm text-muted">Join a tight-knit community through mixers, retreats, and campus events—make friends and expand your network.</p>
-        </div>
-      </section>
-      
-      {/* Client Projects */}
-      <section className="mt-16 md:mt-24 grid md:grid-cols-2 gap-10 items-center">
-        <div className="space-y-4">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Client projects</h2>
-          <p className="text-muted">Consultants and project managers partner with mission-driven teams to deliver research, product strategy, and data insights that make a civic impact.</p>
-          <ul className="list-disc list-inside text-sm text-muted/90 space-y-2">
-            <li>Work directly with stakeholders and users</li>
-            <li>Build case studies for your portfolio</li>
-            <li>Practice consulting fundamentals: scoping, synthesis, delivery</li>
-          </ul>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <Image src="/images/76702894576__AF1B067D-8AB1-467E-A241-196F769ACD27.jpeg" alt="Client workshop" width={1200} height={900} className="rounded-xl ring-1 ring-white/10 w-full h-48 md:h-64 object-cover" />
-          <Image src="/images/IMG_0218.JPG" alt="Team presenting" width={1200} height={900} className="rounded-xl ring-1 ring-white/10 w-full h-48 md:h-64 object-cover" />
-        </div>
-      </section>
+      <h1 className="text-4xl text-center text-urb-maize md:text-7xl font-semibold leading-[1.1] tracking-tight">
+        F25 Rush
+      </h1>
+      <p className="mt-5 text-2xl md:text-3xl text-white text-center max-w-8xl mx-auto">
+        UMich&apos;s first and only urban tech consulting organization wants to get to know you!
+      </p>
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <Link href="#" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">
+          Interest Form
+        </Link>
+        <Link href="#" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">
+          Application
+        </Link>
+      </div>
 
-      {/* Professional Development */}
-      <section className="mt-16 md:mt-24 grid md:grid-cols-2 gap-10 items-center">
-        <div className="order-2 md:order-1 grid grid-cols-3 gap-4">
-          <Image src="/images/IMG_0296.jpeg" alt="Workshop" width={1000} height={750} className="rounded-xl ring-1 ring-white/10 w-full h-28 md:h-40 object-cover" />
-          <Image src="/images/IMG_0300.jpeg" alt="Mentorship" width={1000} height={750} className="rounded-xl ring-1 ring-white/10 w-full h-28 md:h-40 object-cover" />
-          <Image src="/images/IMG_0635.JPG" alt="Career event" width={1000} height={750} className="rounded-xl ring-1 ring-white/10 w-full h-28 md:h-40 object-cover" />
+      <div className="mt-10 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
+        <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+          <iframe
+            className="absolute inset-0 h-full w-full"
+            src="https://www.youtube.com/embed/T6N9qtlr7wg?autoplay=1&mute=1&playsinline=1"
+            title="URB Consulting - F25 Rush"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
-        <div className="order-1 md:order-2 space-y-4">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Professional development</h2>
-          <p className="text-muted">We invest in your growth through skill-building and mentorship designed for urban technology careers in research, product, policy, and data.</p>
-          <ul className="list-disc list-inside text-sm text-muted/90 space-y-2">
-            <li>Hands-on workshops and tool walkthroughs</li>
-            <li>Resume, portfolio, and case review sessions</li>
-            <li>Alumni and industry speaker series</li>
-          </ul>
-        </div>
-      </section>
+      </div>
 
-      {/* Social Events */}
-      <section className="mt-16 md:mt-24 grid md:grid-cols-2 gap-10 items-center">
-        <div className="space-y-4">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Social events</h2>
-          <p className="text-muted">URB is a friendly, supportive community. We host socials, retreats, and campus events where you can meet collaborators and friends.</p>
-          <ul className="list-disc list-inside text-sm text-muted/90 space-y-2">
-            <li>Welcome mixers and member dinners</li>
-            <li>Retreats and end-of-semester celebrations</li>
-            <li>Joint events with campus partners</li>
-          </ul>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <Image src="/images/IMG_9783 (1).JPG" alt="Social event" width={1200} height={900} className="rounded-xl ring-1 ring-white/10 w-full h-48 md:h-64 object-cover" />
-          <Image src="/images/IMG_0723.JPG" alt="Community hangout" width={1200} height={900} className="rounded-xl ring-1 ring-white/10 w-full h-48 md:h-64 object-cover" />
+      {/* Recruitment Timeline */}
+      <section className="mt-16">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-center">Recruitment Timeline</h2>
+
+          {/* Open Rush */}
+          <div className="mt-10 space-y-10">
+            <h3 className="text-lg md:text-xl font-medium text-muted text-center">Open Rush</h3>
+
+            <div className="grid md:grid-cols-3 items-stretch gap-4">
+              <ElectricBorder className="p-6 bg-white/5 md:col-span-2">
+                <div className="text-sm uppercase tracking-wide text-muted">Wednesday 8/27</div>
+                <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">Festifall</div>
+                <p className="mt-2 text-sm md:text-base text-muted">2:00pm - 3:30pm</p>
+                <p className="text-sm md:text-base text-muted">Table C019</p>
+              </ElectricBorder>
+              <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
+                <p className="text-sm md:text-base text-muted">Come meet our members and ask any questions you might have!</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 items-stretch gap-4">
+              <ElectricBorder className="p-6 bg-white/5 md:col-span-2">
+                <div className="text-sm uppercase tracking-wide text-muted">Friday 8/29</div>
+                <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">General Meeting 1 (Hybrid)</div>
+                <p className="mt-2 text-sm md:text-base text-muted">5:00pm - 7:00pm</p>
+                <p className="text-sm md:text-base text-muted">North Quad 1175</p>
+              </ElectricBorder>
+              <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
+                <p className="text-sm md:text-base text-muted">Please come to a General Meeting for your application to be considered!</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 items-stretch gap-4">
+              <ElectricBorder className="p-6 bg-white/5 md:col-span-2">
+                <div className="text-sm uppercase tracking-wide text-muted">Tuesday 9/2</div>
+                <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">General Meeting 2</div>
+                <p className="mt-2 text-sm md:text-base text-muted">7:00pm - 9:00pm</p>
+                <p className="text-sm md:text-base text-muted">Location TBD</p>
+              </ElectricBorder>
+              <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
+                <p className="text-sm md:text-base text-muted">After this meeting, the application is due on Thursday 9/4 at 11:59pm!</p>
+              </div>
+            </div>
+
+            {/* Application Due Callout */}
+            <div className="rounded-2xl bg-urb-maize text-urb-blue p-6 text-center font-medium shadow-[0_0_0_1px_rgba(255,203,5,0.35)]">
+              Application due 9/4 at 11:59pm
+            </div>
+          </div>
+
+          {/* Closed Rush */}
+          <div className="mt-12 space-y-10">
+            <h3 className="text-lg md:text-xl font-medium text-muted text-center">Closed Rush</h3>
+
+            
+
+            <div className="grid md:grid-cols-3 items-stretch gap-4">
+              <ElectricBorder className="p-6 bg-white/5 md:col-span-2">
+                <div className="text-sm uppercase tracking-wide text-muted">Friday 9/5</div>
+                <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">Optimization Challenge</div>
+                <p className="mt-2 text-sm md:text-base text-muted">6:00pm - 8:00pm</p>
+                <p className="text-sm md:text-base text-muted">Location TBD</p>
+              </ElectricBorder>
+              <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
+                <p className="text-sm md:text-base text-muted">Collaborate with teammates to craft a solution to a fun case study problem.</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 items-stretch gap-4">
+              <ElectricBorder className="p-6 bg-white/5 md:col-span-2">
+                <div className="text-sm uppercase tracking-wide text-muted">Monday 9/8</div>
+                <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">Professional Development Event</div>
+                <p className="mt-2 text-sm md:text-base text-muted">7:00pm - 9:00pm</p>
+                <p className="text-sm md:text-base text-muted">Location TBD</p>
+              </ElectricBorder>
+              <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
+                <p className="text-sm md:text-base text-muted">Description pending.</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 items-stretch gap-4">
+              <ElectricBorder className="p-6 bg-white/5 md:col-span-2">
+                <div className="text-sm uppercase tracking-wide text-muted">Wednesday 9/10</div>
+                <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">Trivia Speed Dating</div>
+                <p className="mt-2 text-sm md:text-base text-muted">6:00pm - 8:00pm</p>
+                <p className="text-sm md:text-base text-muted">Location TBD</p>
+              </ElectricBorder>
+              <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
+                <p className="text-sm md:text-base text-muted">Trivia and Speed Dating combined??? Sounds like fun.</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 items-stretch gap-4">
+              <ElectricBorder className="p-6 bg-white/5 md:col-span-2">
+                <div className="text-sm uppercase tracking-wide text-muted">Thursday 9/11, Friday 9/12</div>
+                <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">Interviews</div>
+                <p className="mt-2 text-sm md:text-base text-muted">Times TBD</p>
+                <p className="text-sm md:text-base text-muted">Locations TBD</p>
+              </ElectricBorder>
+              <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
+                <p className="text-sm md:text-base text-muted">Individual interviews will be offered to qualified applicants so that we can learn as much about you as we can.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section className="mt-16 md:mt-24">
-        <a href="mailto:hello@urbconsulting.org" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">Apply or ask a question</a>
-      </section>
+      <div className="mt-32 flex items-center justify-center">
+        <FuzzyText baseIntensity={0.2} hoverIntensity={0.7} enableHover>
+          RUSH URB
+        </FuzzyText>
+      </div>
     </main>
   );
 }

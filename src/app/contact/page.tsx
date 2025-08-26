@@ -3,7 +3,7 @@ export default function ContactPage() {
     <main className="mx-auto max-w-7xl px-6 py-16 md:py-24">
       <header className="max-w-2xl">
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Contact</h1>
-        <p className="mt-4 text-muted">Send a message to our executive board!</p>
+        <p className="mt-4 text-muted">Questions about the recruitment process? Send a message to our executive board!</p>
       </header>
       <section className="mt-10 grid md:grid-cols-2 gap-10 items-start">
         <form action="https://formspree.io/f/xbldvzgo" method="POST" className="grid gap-4">
@@ -14,11 +14,11 @@ export default function ContactPage() {
         </form>
         <div className="text-sm text-muted">
           <div className="font-medium text-foreground">Email</div>
-          <a className="hover:text-foreground" href="mailto:urbconsulting@gmail.com">urbconsulting@gmail.com</a>
+          <a className="hover:text-foreground" href="mailto:urbumich@gmail.com">urbumich@gmail.com</a>
           <div className="mt-6 font-medium text-foreground">Social</div>
           <div className="flex gap-4 mt-1">
-            <a href="#" className="hover:text-foreground">Instagram</a>
-            <a href="#" className="hover:text-foreground">LinkedIn</a>
+            <a href="https://instagram.com/urb.consulting" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Instagram</a>
+            <a href="https://www.linkedin.com/company/urb-consulting" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">LinkedIn</a>
           </div>
         </div>
       </section>

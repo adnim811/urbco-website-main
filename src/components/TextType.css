@@ -1,0 +1,20 @@
+.text-type {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.text-type__content {
+  white-space: pre;
+}
+
+.text-type__cursor {
+  display: inline-block;
+  width: 1ch;
+  color: currentColor;
+}
+
+.text-type__cursor--hidden {
+  visibility: hidden;
+}
+
+
