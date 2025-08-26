@@ -174,7 +174,7 @@ const Waves: React.FC<WavesProps> = ({
     left: 0,
     top: 0,
   });
-  const noiseRef = useRef(new Noise(Math.random()));
+  const noiseRef = useRef(new Noise(1));
   const linesRef = useRef<Point[][]>([]);
   const mouseRef = useRef<Mouse>({
     x: -10,

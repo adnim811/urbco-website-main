@@ -59,8 +59,11 @@ const TextType = ({
   const getRandomSpeed = useCallback(() => {
     if (!variableSpeed) return typingSpeed;
     const { min, max } = variableSpeed;
-    return Math.random() * (max - min) + min;
-  }, [variableSpeed, typingSpeed]);
+    // Deterministic pseudo-random based on current indices to keep SSR/CSR in sync
+    const seedBase = (currentTextIndex + 1) * 9301 + (currentCharIndex + 1) * 49297;
+    const pseudo = ((seedBase % 233280) / 233280);
+    return pseudo * (max - min) + min;
+  }, [variableSpeed, typingSpeed, currentTextIndex, currentCharIndex]);
 
   const getCurrentTextColor = () => {
     if (textColors.length === 0) return "#ffffff";

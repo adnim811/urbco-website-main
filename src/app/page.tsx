@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TextType from "@/components/TextType";
 import Waves from "@/components/Waves";
+import ClientOnly from "@/components/ClientOnly";
 
 export default function Home() {
   return (
@@ -11,31 +12,28 @@ export default function Home() {
       <main>
         
         {/* Hero */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 -z-10">
-            <div className="pointer-events-none absolute -top-32 left-1/2 h-[600px] w-[1200px] -translate-x-1/2 rounded-full bg-urb-blue/40 blur-[120px]" />
-          </div>
-          <div className="mx-auto max-w-7xl px-6 pt-24 pb-20 md:pt-32 md:pb-28 grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h1 className="mt-5 text-4xl md:text-7xl font-semibold leading-[1.1] tracking-tight">
-                UMich&apos;s first and only urban technology consulting club
+        <section className="relative w-full overflow-hidden min-h-[70vh] md:min-h-[80vh]">
+          <Image
+            src="/images/URB_heroshot.JPG"
+            alt="URB Consulting"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="relative z-10 mx-auto max-w-7xl px-6 pt-40 pb-20 md:pt-100 md:pb-10 flex items-center justify-center">
+            <div className="relative w-full max-w-6xl rounded-2xl border border-white/10 bg-background/75 backdrop-blur-sm px-6 py-6 md:px-10 md:py-8 text-center shadow-lg shadow-black/10">
+              <h1 className="mt-2 text-4xl md:text-7xl font-semibold leading-[1.1] tracking-tight">
+                UMich&apos;s first and only <br/>urban technology consulting club
               </h1>
-              <p className="mt-5 text-base md:text-lg text-muted max-w-xl">
-                We do meaningful work based around technology-driven solutions to problems in cities and the built environment. Ready to discover an emerging field, apply your unique skillset, and build meaningful connections? Apply to URB!
+              <p className="mt-5 text-base md:text-lg">
+                We solve difficult problems for organizations that do technology-driven work in
+                cities and the built environment. Ready to discover an emerging field,
+                apply your unique skillset, and build meaningful connections? Apply to URB!
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <Link href="/students" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">F25 Rush Page →</Link>
-              </div>
-              
-            </div>
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
-                <Image src="/images/IMG_0545.JPG" alt="URB Consulting" width={1600} height={1200} className="w-full h-[380px] object-cover" priority />
-              </div>
-              <div className="mt-4 grid grid-cols-3 gap-4">
-                <Image src="/images/20250402_070042_0095B9.JPEG" alt="Event" width={800} height={600} className="rounded-xl ring-1 ring-white/10 w-full h-32 object-cover" />
-                <Image src="/images/20250402_070042_0880A2.JPEG" alt="Workshop" width={800} height={600} className="rounded-xl ring-1 ring-white/10 w-full h-32 object-cover" />
-                <Image src="/images/20250402_070042_0998CA.JPEG" alt="Community" width={800} height={600} className="rounded-xl ring-1 ring-white/10 w-full h-32 object-cover" />
               </div>
             </div>
           </div>
@@ -48,60 +46,60 @@ export default function Home() {
             {/* Company Logos */}
             <div className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                <div className="relative h-28 md:h-32 flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                   <Image 
                     src="/images/company_logos/airbnb.png" 
                     alt="Airbnb" 
-                    width={120} 
-                    height={60} 
-                    className="max-w-full h-auto object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-contain filter opacity-80 hover:opacity-100 transition-opacity transform scale-85" 
                   />
                 </div>
-                <div className="flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                <div className="relative h-28 md:h-32 flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                   <Image 
                     src="/images/company_logos/google.webp" 
                     alt="Google" 
-                    width={120} 
-                    height={60} 
-                    className="max-w-full h-auto object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-contain filter opacity-80 hover:opacity-100 transition-opacity transform scale-90" 
                   />
                 </div>
-                <div className="flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                <div className="relative h-28 md:h-32 flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                   <Image 
                     src="/images/company_logos/microsoft.png" 
                     alt="Microsoft" 
-                    width={120} 
-                    height={60} 
-                    className="max-w-full h-auto object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-contain filter opacity-80 hover:opacity-100 transition-opacity transform scale-85" 
                   />
                 </div>
-                <div className="flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                <div className="relative h-28 md:h-32 flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                   <Image 
                     src="/images/company_logos/waymo.png" 
                     alt="Waymo" 
-                    width={120} 
-                    height={60} 
-                    className="max-w-full h-auto object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
                   />
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                <div className="relative h-28 md:h-32 flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                   <Image 
                     src="/images/company_logos/lime.png" 
                     alt="Lime" 
-                    width={120} 
-                    height={60} 
-                    className="max-w-full h-auto object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
                   />
                 </div>
-                <div className="flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                <div className="relative h-28 md:h-32 flex items-center justify-center p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                   <Image 
                     src="/images/company_logos/arup.png" 
                     alt="Arup" 
-                    width={120} 
-                    height={60} 
-                    className="max-w-full h-auto object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-contain filter opacity-80 hover:opacity-100 transition-opacity" 
                   />
                 </div>
               </div>
@@ -114,10 +112,11 @@ export default function Home() {
                 <br /><br />
                  It&apos;s easiest to think of UT as an umbrella term that spans a cluster of industries and professions, including mobility (rideshare, AVs, micromobility), real estate (data centers, sustainability), placemaking (architecture, urban planning), policy, and digital design (UI/UX, dataviz).
                   Some familiar examples of urban tech in action are companies like Uber and Airbnb, or the public sector divisions of companies like Microsoft and Google.
-                  <br /><br />
-                  <div className="border-t border-white/10 my-4"></div>
-                  <span className="text-urb-maize">The University of Michigan is the only university in the world containing an undergraduate degree in Urban Technology, 
-                  and our club connects driven and entrepreneurial students with the professional world of this emerging field.</span>
+              </p>
+              <div className="border-t border-white/10 my-4"></div>
+              <p className="text-base md:text-lg text-foreground/90">
+                <span className="text-urb-maize">The University of Michigan is the only university in the world containing an undergraduate degree in Urban Technology. 
+                URB Consulting connects driven and entrepreneurial students interested in Urban Tech with the professional world of this emerging field.</span>
               </p>
             </div>
           </div>
@@ -136,29 +135,31 @@ export default function Home() {
             </p>
             <div className="text-xl md:text-3xl text-foreground/90">
               <span>Our current members are majoring in </span>
-              <TextType
-                as="span"
-                className="font-medium text-urb-maize"
-                text={[
-                  "Urban Technology.",
-                  "Computer Science.",
-                  "Industrial and Operations Engineering.",
-                  "Environment.",
-                  "Economics.",
-                  "Civil Engineering.",
-                  "Mathematics.",
-                  "UX Design.",
-                ]}
-                typingSpeed={55}
-                deletingSpeed={55}
-                pauseDuration={3000}
-                variableSpeed={{ min: 35, max: 75 }}
-                cursorCharacter="|"
-                textColors={["#FFCB05"]}
-                cursorClassName="ml-1"
-                showCursor
-                loop
-              />
+              <ClientOnly>
+                <TextType
+                  as="span"
+                  className="font-medium text-urb-maize"
+                  text={[
+                    "Urban Technology.",
+                    "Computer Science.",
+                    "Industrial and Operations Engineering.",
+                    "Environment.",
+                    "Economics.",
+                    "Civil Engineering.",
+                    "Mathematics.",
+                    "UX Design.",
+                  ]}
+                  typingSpeed={55}
+                  deletingSpeed={55}
+                  pauseDuration={3000}
+                  variableSpeed={{ min: 35, max: 75 }}
+                  cursorCharacter="|"
+                  textColors={["#FFCB05"]}
+                  cursorClassName="ml-1"
+                  showCursor
+                  loop
+                />
+              </ClientOnly>
             </div>
           </div>
         </section>
@@ -219,7 +220,7 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-3 gap-4">
                 <Image src="/images/IMG_9783 (1).JPG" alt="Social events" width={800} height={600} className="rounded-xl ring-1 ring-white/10 w-full h-48 md:h-64 object-cover" />
-                <Image src="/images/20250402_070042_0556C5.JPEG" alt="Social events" width={800} height={600} className="rounded-xl ring-1 ring-white/10 w-full h-48 md:h-64 object-cover" />
+                <Image src="/images/blue_team.jpeg" alt="Social events" width={800} height={600} className="rounded-xl ring-1 ring-white/10 w-full h-48 md:h-64 object-cover" />
                 <Image src="/images/20250402_070042_0998CA.JPEG" alt="Social events" width={800} height={600} className="rounded-xl ring-1 ring-white/10 w-full h-48 md:h-64 object-cover" />
               </div>
             </div>
@@ -229,7 +230,9 @@ export default function Home() {
         {/* F25 Rush CTA */}
         <section className="mx-auto max-w-4xl px-6 py-16 md:py-24">
           <div className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 md:p-12 text-center overflow-hidden">
-            <Waves className="pointer-events-none" lineColor="rgba(255,255,255,0.15)" backgroundColor="transparent" />
+            <ClientOnly>
+              <Waves className="pointer-events-none" lineColor="rgba(255,255,255,0.15)" backgroundColor="transparent" />
+            </ClientOnly>
             <h3 className="text-2xl md:text-4xl font-semibold tracking-tight">
               Interested? <br /><br />Come meet us at our recruitment events and apply! Visit our F25 Rush page now for our recruitment timeline and our application.
             </h3>
