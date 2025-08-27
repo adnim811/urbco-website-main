@@ -33,7 +33,7 @@ export default function Home() {
                 apply your unique skillset, and build meaningful connections? Apply to URB!
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <Link href="/students" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">F25 Rush Page →</Link>
+                <Link href="/f25rush" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">F25 Rush Page →</Link>
               </div>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function Home() {
               Interested? <br /><br />Come meet us at our recruitment events and apply! Visit our F25 Rush page now for our recruitment timeline and our application.
             </h3>
             <div className="mt-6">
-              <Link href="/students" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(230,180,0,1)] hover:shadow-[0_0_0_3px_rgba(230,180,0,0.6)] transition-shadow">F25 Rush Page →</Link>
+              <Link href="/f25rush" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(230,180,0,1)] hover:shadow-[0_0_0_3px_rgba(230,180,0,0.6)] transition-shadow">F25 Rush Page →</Link>
             </div>
           </div>
         </section>

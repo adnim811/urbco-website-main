@@ -110,7 +110,7 @@ export default function StudentsPage() {
                 <p className="text-sm md:text-base text-muted">Location TBD</p>
               </ElectricBorder>
               <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
-                <p className="text-sm md:text-base text-muted">Description pending.</p>
+                <p className="text-sm md:text-base text-muted">Showcase your professional skills and your willingness to learn.</p>
               </div>
             </div>
 
