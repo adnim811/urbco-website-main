@@ -107,7 +107,7 @@ export default function StudentsPage() {
                 <div className="text-sm uppercase tracking-wide text-muted">Monday 9/8</div>
                 <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">Professional Development Event</div>
                 <p className="mt-2 text-sm md:text-base text-muted">7:00pm - 9:00pm</p>
-                <p className="text-sm md:text-base text-muted">Location TBD</p>
+                <p className="text-sm md:text-base text-muted">NQ 2245</p>
               </ElectricBorder>
               <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
                 <p className="text-sm md:text-base text-muted">Showcase your professional skills and your willingness to learn.</p>
@@ -119,7 +119,7 @@ export default function StudentsPage() {
                 <div className="text-sm uppercase tracking-wide text-muted">Wednesday 9/10</div>
                 <div className="mt-1 text-xl md:text-2xl font-semibold tracking-tight">Trivia Speed Dating</div>
                 <p className="mt-2 text-sm md:text-base text-muted">6:00pm - 8:00pm</p>
-                <p className="text-sm md:text-base text-muted">Location TBD</p>
+                <p className="text-sm md:text-base text-muted">NQ 2245</p>
               </ElectricBorder>
               <div className="p-4 rounded-2xl border border-white/10 bg-white/5 md:col-span-1">
                 <p className="text-sm md:text-base text-muted">Trivia and Speed Dating combined??? Sounds like fun.</p>
