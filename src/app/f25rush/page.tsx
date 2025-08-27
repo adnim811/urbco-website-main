@@ -24,7 +24,7 @@ export default function StudentsPage() {
         <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
           <iframe
             className="absolute inset-0 h-full w-full"
-            src="https://www.youtube.com/embed/T6N9qtlr7wg?autoplay=1&mute=1&playsinline=1"
+            src="https://www.youtube.com/embed/qrLDAO7Px7Q?autoplay=1&mute=1&playsinline=1"
             title="URB Consulting - F25 Rush"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
