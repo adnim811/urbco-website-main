@@ -12,7 +12,7 @@ export default function StudentsPage() {
         UMich&apos;s first and only urban tech consulting organization wants to get to know you!
       </p>
       <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-        <Link href="#" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">
+        <Link href="https://forms.gle/JfnygpzDKnZiBu5K6" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">
           Interest Form
         </Link>
         <Link href="https://tally.so/r/3q94Y9" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">

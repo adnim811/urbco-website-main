@@ -46,7 +46,7 @@ export default function RootLayout({
           <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
               <div className="h-15 w-15 rounded-md overflow-hidden relative">
-                <Image src="/images/LogoFinal_custom_bg.png" alt="URB logo" fill className="object-contain p-1" />
+                <Image src="/images/LogoFinal_normal_circle.png" alt="URB logo" fill className="object-contain p-1" />
               </div>
               <span className="text-3xl font-semibold tracking-tight">URB Consulting</span>
             </Link>
