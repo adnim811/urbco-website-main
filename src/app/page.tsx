@@ -1,9 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Bus, Home as HomeIcon, Zap, Database, Landmark, Settings2, Code2, TrendingUp } from "lucide-react";
 import TextType from "@/components/TextType";
 import Waves from "@/components/Waves";
 import ClientOnly from "@/components/ClientOnly";
 import LogoLoop from "@/components/LogoLoop";
+import SectionHeading from "@/components/SectionHeading";
+import AnimatedCounter from "@/components/AnimatedCounter";
+import MajorCard from "@/components/MajorCard";
+
+const domainTags = [
+  { label: "Mobility", icon: Bus },
+  { label: "Housing", icon: HomeIcon },
+  { label: "Energy", icon: Zap },
+  { label: "Policy & Data", icon: Database },
+];
+
+const majors = [
+  {
+    label: "Poli Sci",
+    heading: "Policy meets product",
+    description:
+      "Translate zoning codes, transit funding, and regulatory context into strategy clients can actually act on.",
+    icon: Landmark,
+  },
+  {
+    label: "IOE",
+    heading: "Systems thinking, applied",
+    description:
+      "Run process mapping, ops analysis, and optimization frameworks against real infrastructure and logistics problems.",
+    icon: Settings2,
+  },
+  {
+    label: "Computer Science",
+    heading: "Ship, don't simulate",
+    description:
+      "Build lightweight tools, dashboards, and prototypes for clients who need something working, not just a slide.",
+    icon: Code2,
+  },
+  {
+    label: "Ross",
+    heading: "Strategy with a P&L lens",
+    description:
+      "Lead market entry, GTM, and financial modeling work for companies operating in the built environment.",
+    icon: TrendingUp,
+  },
+];
 
 export default function Home() {
   return (
@@ -11,9 +53,9 @@ export default function Home() {
       {/* Header moved to global layout */}
 
       <main>
-        
+
         {/* Hero */}
-        <section className="relative w-full overflow-hidden min-h-[70vh] md:min-h-[80vh]">
+        <section className="relative w-full overflow-hidden min-h-[80vh] md:min-h-[90vh] flex items-end md:items-center">
           <Image
             src="/images/URB_heroshot.JPG"
             alt="URB Consulting"
@@ -22,27 +64,65 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="relative z-10 mx-auto max-w-7xl px-6 pt-40 pb-20 md:pt-100 md:pb-10 flex items-center justify-center">
-            <div className="relative w-full max-w-6xl rounded-2xl border border-white/10 bg-background/75 backdrop-blur-sm px-6 py-6 md:px-10 md:py-8 text-center shadow-lg shadow-black/10">
-              <h1 className="mt-2 text-4xl md:text-7xl font-semibold leading-[1.1] tracking-tight">
-                UMich&apos;s first and only <br/>urban technology consulting club
-              </h1>
-              <p className="mt-5 text-base md:text-lg">
-                We solve difficult problems for organizations that do technology-driven work in
-                cities and the built environment. Ready to discover an emerging field,
-                apply your unique skillset, and build meaningful connections? Apply to URB!
-              </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <Link href="/f26rush" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">F26 Rush Page →</Link>
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20 md:bg-gradient-to-r md:from-background md:via-background/85 md:to-background/30" />
+          <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:py-24 w-full">
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-2 text-xs md:text-sm font-mono uppercase tracking-[0.15em] text-urb-maize">
+                <span className="h-2 w-2 rounded-full bg-urb-maize" />
+                UMich&apos;s first urban tech consultancy
               </div>
+              <h1 className="mt-4 text-4xl md:text-7xl font-semibold leading-[1.05] tracking-tight text-white">
+                Where cities <span className="text-urb-maize">meet</span> code, capital &amp; policy.
+              </h1>
+              <p className="mt-5 text-base md:text-lg text-foreground/90">
+                URB Consulting delivers pro-bono strategy work for organizations building the
+                technology layer of cities — mobility, housing, energy, and the platforms that
+                connect them.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link href="/apply" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">Apply Now →</Link>
+                <Link href="/projects" className="inline-flex items-center rounded-full border border-white/25 text-white font-medium px-5 py-3 hover:bg-white/10 transition-colors">See Our Work</Link>
+              </div>
+              <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+                {domainTags.map(({ label, icon: Icon }) => (
+                  <span key={label} className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wide text-muted">
+                    <Icon className="h-4 w-4" />
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Impact metrics */}
+        <section className="mx-auto max-w-7xl px-6 py-20 md:py-24">
+          <SectionHeading eyebrow="Impact, to date" title="The route so far" />
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
+              <div className="text-4xl md:text-5xl font-semibold tracking-tight text-urb-maize">
+                <AnimatedCounter value={12} suffix="+" />
+              </div>
+              <p className="mt-2 text-sm md:text-base text-muted">Cities touched</p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
+              <div className="text-4xl md:text-5xl font-semibold tracking-tight text-urb-maize">
+                <AnimatedCounter value={8} suffix="+" />
+              </div>
+              <p className="mt-2 text-sm md:text-base text-muted">Client engagements</p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
+              <div className="text-4xl md:text-5xl font-semibold tracking-tight text-urb-maize">
+                <AnimatedCounter value={40} suffix="+" />
+              </div>
+              <p className="mt-2 text-sm md:text-base text-muted">Active members</p>
             </div>
           </div>
         </section>
 
         {/* What is Urban Technology? */}
         <section className="mx-auto max-w-7xl px-6 py-20 md:py-24">
-          <h2 className="text-2xl md:text-7xl font-semibold tracking-tight mb-12">What is Urban Technology?</h2>
+          <SectionHeading eyebrow="The Field" title="What is Urban Technology?" className="mb-12" />
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image with Caption */}
             <div className="space-y-4">
@@ -78,7 +158,7 @@ export default function Home() {
         
         {/* What We Do */}
         <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <h2 className="text-4xl md:text-7xl font-semibold tracking-tight mb-12">What we do</h2>
+          <SectionHeading eyebrow="How We Help" title="What we do" className="mb-12" />
 
           {/* Client projects */}
           <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
@@ -149,9 +229,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Where we've been */}
+        {/* Companies we've worked with */}
         <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <h2 className="text-3xl md:text-6xl font-semibold tracking-tight mb-12">Where we&apos;ve been...</h2>
+          <SectionHeading eyebrow="Our Partners" title="Companies we've worked with" className="mb-12" />
           <div className="relative" style={{ height: '120px' }}>
             <LogoLoop
               logos={[
@@ -231,6 +311,22 @@ export default function Home() {
                   loop
                 />
               </ClientOnly>
+            </div>
+          </div>
+
+          <div className="mt-16">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.15em] text-urb-maize">
+              <span className="h-2 w-2 rounded-full bg-urb-maize" />
+              Not an urban tech major? Good.
+            </div>
+            <h3 className="mt-3 text-2xl md:text-4xl font-semibold tracking-tight text-white">Built for interdisciplinary minds</h3>
+            <p className="mt-3 text-base md:text-lg text-muted max-w-2xl">
+              Every case team pulls from multiple majors. Here&apos;s what URB looks like from where you&apos;re standing.
+            </p>
+            <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {majors.map((major) => (
+                <MajorCard key={major.label} major={major} />
+              ))}
             </div>
           </div>
         </section>

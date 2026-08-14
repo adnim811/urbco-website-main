@@ -52,10 +52,12 @@ export default function RootLayout({
             </Link>
             <div className="flex items-center gap-8">
               <nav className="hidden md:flex items-center gap-8 text-sm text-muted">
-                <Link href="/f26rush" className="hover:text-foreground transition-colors">F26 Rush</Link>
+                <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
+                <Link href="/projects" className="hover:text-foreground transition-colors">Projects</Link>
                 <Link href="/about" className="hover:text-foreground transition-colors">About Us</Link>
+                <Link href="/f26rush" className="hover:text-foreground transition-colors">F26 Rush</Link>
               </nav>
-              <Link href="https://tally.so/r/A7p7Xz" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-4 py-2 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">Apply Now →</Link>
+              <Link href="/apply" className="hidden sm:inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-4 py-2 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">Apply Now →</Link>
             </div>
           </div>
         </header>
