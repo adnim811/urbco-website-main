@@ -35,7 +35,7 @@ const executiveBoard: TeamMember[] = [
     name: "Pranav Joshi",
     role: "VP Professional Development",
     major: "Computer Science",
-    image: "/images/about_pics/headshots/joshi.jpeg",
+    image: "/images/about_pics/headshots/pranav.jpg",
     linkedin: "https://www.linkedin.com/in/pranavv-joshi/",
   },
   {
@@ -49,13 +49,14 @@ const executiveBoard: TeamMember[] = [
     name: "Dana Clocker",
     role: "VP External Affairs",
     major: "Information Analysis",
-    image: "/images/about_pics/headshots/dana.jpeg",
+    image: "/images/about_pics/headshots/dana.jpg",
     linkedin: "https://www.linkedin.com/in/dana-clocker/",
   },
   {
     name: "Phoebe Knoll",
     role: "VP Community",
     major: "Economics & Environmental Science",
+    image: "/images/about_pics/headshots/phoebe.jpg",
     linkedin: "https://www.linkedin.com/in/phoebeknoll/",
   },
 ];
