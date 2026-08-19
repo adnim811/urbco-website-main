@@ -14,6 +14,7 @@ const executiveBoard: TeamMember[] = [
     name: "Joyce Kim",
     role: "VP Marketing",
     major: "Information Analysis & HCI",
+    image: "/images/about_pics/headshots/joyce.jpeg",
     linkedin: "https://www.linkedin.com/in/joyce-kim-341176378/",
   },
   {
