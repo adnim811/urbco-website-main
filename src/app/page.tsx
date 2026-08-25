@@ -8,6 +8,7 @@ import LogoLoop from "@/components/LogoLoop";
 import SectionHeading from "@/components/SectionHeading";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import MajorCard from "@/components/MajorCard";
+import TestimonialCard from "@/components/TestimonialCard";
 
 const domainTags = [
   { label: "Mobility", icon: Bus },
@@ -47,6 +48,23 @@ const majors = [
   },
 ];
 
+const testimonials = [
+  {
+    quote:
+      "URB gave me the confidence to lead a team of people with completely different strengths and approaches, and to genuinely value what each of them brought to the table. That independence carried straight into my first internship, where I could take ownership of my work from day one. Beyond the resume line, URB gave me a community I still lean on for everything from career advice to dinner plans.",
+    name: "Yoshi Sarkar",
+    detail: "IOE, 2029",
+    image: "/images/about_pics/headshots/yoshi.png",
+  },
+  {
+    quote:
+      "URB's culture of kindness paired with high expectations makes it the best filter for meeting genuinely interesting, capable people. Some of my closest friends at Michigan came from my project team. Analyst development reshaped how I think about professionalism, from resume building to communication skills, while connecting me with people in my major who could help with coursework. Joining URB has been nothing but a win.",
+    name: "Henry Parker",
+    detail: "Urban Technology, 2029",
+    image: "/images/about_pics/headshots/henry.png",
+  },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen w-full">
@@ -76,7 +94,7 @@ export default function Home() {
               </h1>
               <p className="mt-5 text-base md:text-lg text-foreground/90">
                 URB Consulting delivers pro-bono strategy work for organizations building the
-                technology layer of cities — mobility, housing, energy, and the platforms that
+                technology layer of cities: mobility, housing, energy, and the platforms that
                 connect them.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -331,6 +349,15 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Member testimonials */}
+        <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+          <SectionHeading eyebrow="Member Voices" title="Hear from our members" />
+          <div className="mt-10 grid md:grid-cols-2 gap-6">
+            {testimonials.map((testimonial) => (
+              <TestimonialCard key={testimonial.name} testimonial={testimonial} />
+            ))}
+          </div>
+        </section>
 
         {/* F26 Rush CTA */}
         <section className="mx-auto max-w-4xl px-6 py-16 md:py-24">

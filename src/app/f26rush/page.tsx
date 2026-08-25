@@ -12,7 +12,7 @@ const timeline: TrainGroup[] = [
         title: "Festifall North",
         time: "Time TBD",
         location: "Location TBD",
-        description: "Come find our table at Festifall North — meet our members and ask any questions you might have!",
+        description: "Visit our table at Festifall North to meet URB members and learn about the club.",
       },
       {
         id: "festifall",
@@ -20,7 +20,7 @@ const timeline: TrainGroup[] = [
         title: "Festifall",
         time: "Time TBD",
         location: "Location TBD",
-        description: "Catch us at Festifall on Central Campus — stop by our table to say hi and learn about URB!",
+        description: "Visit our table at Festifall on Central Campus to learn about URB and ask questions.",
       },
       {
         id: "gm1",
@@ -28,7 +28,7 @@ const timeline: TrainGroup[] = [
         title: "General Meeting 1 (Hybrid)",
         time: "5–7pm",
         location: "CCCB 0420*",
-        description: "Please attend a General Meeting for your application to be considered! We recommend attending in person.",
+        description: "Attendance at a General Meeting is required for your application to be considered. In-person attendance is recommended.",
       },
       {
         id: "gm2",
@@ -36,7 +36,7 @@ const timeline: TrainGroup[] = [
         title: "General Meeting 2 (Hybrid)",
         time: "6–8pm",
         location: "CCCB 0420*",
-        description: "Your last chance to meet the team before applications close — bring your questions!",
+        description: "Final opportunity to meet the team and ask questions before applications close.",
       },
       {
         id: "app-due",
@@ -56,7 +56,7 @@ const timeline: TrainGroup[] = [
         title: "Optimization Challenge",
         time: "Time TBD",
         location: "Location TBD",
-        description: "Hope you know how to make paper planes...",
+        description: "A hands-on exercise in which participants optimize a physical design under given constraints.",
       },
       {
         id: "speed-dating",
@@ -64,7 +64,7 @@ const timeline: TrainGroup[] = [
         title: "Speed Dating",
         time: "TBD (2 sessions)",
         location: "Location TBD",
-        description: "Prepare to answer some ridiculous questions (and also have a great time).",
+        description: "A series of short, rotating conversations with current members to get to know the club.",
       },
       {
         id: "slideshow-karaoke",
@@ -72,12 +72,12 @@ const timeline: TrainGroup[] = [
         title: "Slideshow Karaoke",
         time: "TBD (2 sessions)",
         location: "Location TBD",
-        description: "Belt it out and show off your best (or worst) karaoke moves with the team!",
+        description: "A social event combining short member presentations with a karaoke session.",
       },
       {
         id: "case-study",
         code: "Mon · Sep 21",
-        title: "Professional Development Event / Case Study (PJ)",
+        title: "Professional Development Event",
         time: "Time TBD",
         location: "Location TBD",
         description: "Work in a group to create and present a solution to a real urban technology problem.",
@@ -88,7 +88,7 @@ const timeline: TrainGroup[] = [
         title: "Optional Coffee Chats",
         time: "Times vary",
         location: "Locations vary",
-        description: "Coffee chat an URB member if you have any questions before interviews!",
+        description: "An optional opportunity to speak with an URB member ahead of interviews.",
       },
       {
         id: "interviews",
@@ -107,7 +107,7 @@ const timeline: TrainGroup[] = [
         id: "decisions",
         code: "Final Stop",
         title: "Decisions Released",
-        description: "Welcome to URB Consulting — your first General Meeting as a member is right around the corner!",
+        description: "Welcome to URB Consulting. Your first General Meeting as a member is right around the corner.",
         emphasis: true,
       },
     ],

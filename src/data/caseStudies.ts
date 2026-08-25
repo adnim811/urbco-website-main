@@ -55,4 +55,103 @@ export const caseStudies: CaseStudy[] = [
     mapY: 57.67,
     visualization: "house-grid",
   },
+  {
+    id: "adu-market-entry-gtm",
+    domain: "Housing",
+    city: "San Francisco, CA",
+    title: "ADU Market-Entry GTM Strategy",
+    description:
+      "Developed a go-to-market strategy for a drone-based 3D modeling company entering the accessory dwelling unit (ADU) market in California.",
+    tags: ["GTM", "Market Research", "Housing Policy"],
+    mapX: 3.03,
+    mapY: 41.15,
+  },
+  {
+    id: "ann-arbor-sustainability-map",
+    domain: "Energy",
+    city: "Ann Arbor, MI",
+    title: "Municipal Sustainability Resource Map",
+    description:
+      "Designed and built a web-based map helping residents discover local sustainability resources for a city office of sustainability.",
+    tags: ["Web Development", "GIS", "Public Sector"],
+    mapX: 70.51,
+    mapY: 33.05,
+  },
+  {
+    id: "air-quality-market-entry",
+    domain: "Policy & Data",
+    city: "Detroit, MI",
+    title: "Air Quality Awareness & Market Entry",
+    description:
+      "Led user segmentation, product design, and a market entry strategy for a hyperlocal air quality data platform expanding into a new county.",
+    tags: ["User Research", "Product Strategy", "Market Entry"],
+    mapX: 70.9,
+    mapY: 31.8,
+  },
+  {
+    id: "ebike-app-ux-research",
+    domain: "Mobility",
+    city: "Brooklyn, NY",
+    title: "E-Bike Attachment App UX Research",
+    description:
+      "Conducted UX research and design for a mobile app pairing hardware and software for an e-bike conversion attachment.",
+    tags: ["UX Research", "Product Design"],
+    mapX: 86.9,
+    mapY: 33.4,
+  },
+  {
+    id: "ebike-campus-gtm",
+    domain: "Mobility",
+    city: "Brooklyn, NY",
+    title: "Campus Market GTM Strategy",
+    description:
+      "Ran user research and a go-to-market strategy to bring an e-bike conversion attachment to the college student market.",
+    tags: ["User Research", "GTM"],
+    mapX: 86.9,
+    mapY: 34.7,
+  },
+  {
+    id: "battery-safety-stakeholder-strategy",
+    domain: "Energy",
+    city: "Detroit, MI",
+    title: "Battery Safety Stakeholder Strategy",
+    description:
+      "Conducted stakeholder research and a marketing strategy for a fire-prone lithium-ion battery transport and storage company partnering with university stakeholders.",
+    tags: ["Stakeholder Research", "Marketing Strategy"],
+    mapX: 72.4,
+    mapY: 31.9,
+  },
+  {
+    id: "infrastructure-resilience-pricing",
+    domain: "Policy & Data",
+    city: "Brooklyn, NY",
+    title: "Infrastructure Resilience Pricing Strategy",
+    description:
+      "Built a tiered pricing strategy and financial model for a drone-based infrastructure resilience assessment platform targeting distinct customer segments.",
+    tags: ["Financial Modeling", "Pricing Strategy"],
+    mapX: 88.3,
+    mapY: 34.0,
+  },
+  {
+    id: "onchain-real-estate-gtm",
+    domain: "Housing",
+    city: "Detroit, MI",
+    title: "On-Chain Real Estate GTM Strategy",
+    description:
+      "Built a ground-up go-to-market strategy, policy research, and market positioning for a blockchain platform pioneering shared real estate ownership.",
+    tags: ["GTM", "Policy Research", "Market Positioning"],
+    mapX: 70.9,
+    mapY: 33.3,
+  },
+  {
+    id: "civic-engagement-app-ux",
+    domain: "Policy & Data",
+    city: "Detroit, MI",
+    title: "Civic Engagement App UX Research",
+    description:
+      "Led UX research and design for an app making political data more accessible and empowering students to stay politically informed.",
+    tags: ["UX Research", "Civic Tech"],
+    mapX: 72.4,
+    mapY: 33.3,
+  },
 ];
