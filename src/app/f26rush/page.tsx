@@ -1,6 +1,8 @@
 import Link from "next/link";
 import FuzzyText from "@/components/FuzzyText";
 import TrainTimeline, { TrainGroup } from "@/components/TrainTimeline";
+import TextType from "@/components/TextType";
+import ClientOnly from "@/components/ClientOnly";
 
 const timeline: TrainGroup[] = [
   {
@@ -12,36 +14,39 @@ const timeline: TrainGroup[] = [
         title: "Festifall North",
         time: "Time TBD",
         location: "Location TBD",
-        description: "Visit our table at Festifall North to meet URB members and learn about the club.",
+        description: "Come find us roaming Festifall North to learn more about URB!",
       },
       {
         id: "festifall",
         code: "Wed · Sep 2",
-        title: "Festifall",
-        time: "Time TBD",
-        location: "Location TBD",
-        description: "Visit our table at Festifall on Central Campus to learn about URB and ask questions.",
+        title: "Festifall Central",
+        time: "3–5pm",
+        location: "Table C-44, the Diag",
+        description: "Come to our Festifall table to meet URB members and learn about what we do!",
       },
       {
         id: "gm1",
         code: "Fri · Sep 4",
         title: "General Meeting 1 (Hybrid)",
         time: "5–7pm",
-        location: "CCCB 0420*",
-        description: "Attendance at a General Meeting is required for your application to be considered. In-person attendance is recommended.",
+        location: "NQ 2255",
+        description: "Come to a general meeting to learn what URB has planned for the semester and meet a ton of our members. Attending a general meeting in-person is HIGHLY recommended!",
       },
       {
         id: "gm2",
         code: "Tue · Sep 8",
         title: "General Meeting 2 (Hybrid)",
         time: "6–8pm",
-        location: "CCCB 0420*",
+        location: "NQ 2255",
         description: "Final opportunity to meet the team and ask questions before applications close.",
       },
       {
         id: "app-due",
-        code: "Week 2 · TBD",
+        code: "Thu · Sep 10",
         title: "Application Due",
+        time: "11:59pm",
+        location: "urbumich.com/apply",
+        href: "https://urbumich.com/apply",
         description: "Submit your application before the deadline to be considered for closed rush.",
         emphasis: true,
       },
@@ -56,7 +61,7 @@ const timeline: TrainGroup[] = [
         title: "Optimization Challenge",
         time: "Time TBD",
         location: "Location TBD",
-        description: "A hands-on exercise in which participants optimize a physical design under given constraints.",
+        description: "Does your team have what it takes to fly? This challenge will push you to solve a fun business problem with fellow rushees.",
       },
       {
         id: "speed-dating",
@@ -64,7 +69,7 @@ const timeline: TrainGroup[] = [
         title: "Speed Dating",
         time: "TBD (2 sessions)",
         location: "Location TBD",
-        description: "A series of short, rotating conversations with current members to get to know the club.",
+        description: "Answer a barrage of fun questions from URB members.",
       },
       {
         id: "slideshow-karaoke",
@@ -72,7 +77,7 @@ const timeline: TrainGroup[] = [
         title: "Slideshow Karaoke",
         time: "TBD (2 sessions)",
         location: "Location TBD",
-        description: "A social event combining short member presentations with a karaoke session.",
+        description: "Show off your impromptu presentation and collaboration skills!",
       },
       {
         id: "case-study",
@@ -98,46 +103,14 @@ const timeline: TrainGroup[] = [
         location: "Locations vary",
         description: "Individual interviews offered to qualified applicants so we can learn as much about you as we can.",
       },
-    ],
-  },
-  {
-    label: "Welcome Aboard",
-    stops: [
       {
         id: "decisions",
         code: "Final Stop",
         title: "Decisions Released",
-        description: "Welcome to URB Consulting. Your first General Meeting as a member is right around the corner.",
+        description: "Welcome to URB Consulting!",
         emphasis: true,
       },
     ],
-  },
-];
-
-const studentHighlights = [
-  {
-    major: "Computer Science",
-    blurb:
-      "Ship real product features and data tools for urban tech clients — full-stack, client-facing work that's hard to find as an underclassman.",
-    tags: ["Web/App Dev", "Data Viz"],
-  },
-  {
-    major: "Political Science",
-    blurb:
-      "Translate policy and public-sector complexity into strategy recommendations that reach transit agencies, housing authorities, and city governments.",
-    tags: ["Policy Research", "Public Sector"],
-  },
-  {
-    major: "Industrial & Operations Engineering",
-    blurb:
-      "Apply optimization, process design, and data analysis to real logistics and infrastructure problems — not just case studies.",
-    tags: ["Optimization", "Data Analysis"],
-  },
-  {
-    major: "Ross (Business)",
-    blurb:
-      "Lead go-to-market, market entry, and growth strategy engagements for clients building the future of cities.",
-    tags: ["Go-To-Market", "Strategy"],
   },
 ];
 
@@ -155,49 +128,65 @@ export default function F26RushPage() {
           UMich&apos;s first and only urban tech consulting organization wants to get to know you!
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe_oYZDCmPuZW4uZrw5hjEQI5K_2umwy_V5C0tYw4y9y3a5Qw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow"
+          >
+            Interest Form
+          </Link>
           <span className="inline-flex cursor-not-allowed items-center rounded-full bg-white/10 text-white/50 font-medium px-5 py-3 ring-1 ring-white/10">
-            Interest Form — Coming Soon
-          </span>
-          <span className="inline-flex cursor-not-allowed items-center rounded-full bg-white/10 text-white/50 font-medium px-5 py-3 ring-1 ring-white/10">
-            Application — Coming Soon
+            Application opening soon!
           </span>
         </div>
-        <p className="mt-4 text-sm text-muted">Full schedule and application links are on the way — check back soon!</p>
       </div>
 
       {/* Recruitment Timeline */}
       <section className="mt-20 md:mt-28">
         <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-center">All Aboard: The F26 Rush Line</h2>
-        <p className="mt-4 text-base md:text-lg text-muted text-center max-w-2xl mx-auto">
-          Follow the line from open rush all the way to welcome aboard — scroll down to ride along.
-        </p>
         <TrainTimeline groups={timeline} className="mt-16" />
       </section>
 
-      {/* Student highlights */}
+      {/* Majors diversity */}
       <section className="mt-24 md:mt-32">
-        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-center">Not an Urban Tech major? Good.</h2>
-        <p className="mt-4 text-base md:text-lg text-muted text-center max-w-3xl mx-auto">
-          Urban tech is interdisciplinary by nature. Whatever you study, there&apos;s a lane for you at URB.
+        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
+          Not familiar with urban tech? No problem! We look for <span className="text-urb-maize">problem-solvers</span> from a wide variety of majors!
+     
+        </h2>
+        <p className="mt-6 text-base md:text-lg text-muted max-w-7xl">
+          We value members with unique perspectives, a bias to action, and an ambition to solve problems, regardless of major and level of familiarity with urban tech. We encourage anyone interested to apply!
         </p>
-        <div className="mt-12 grid sm:grid-cols-2 gap-6">
-          {studentHighlights.map((s) => (
-            <div key={s.major} className="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-urb-maize">{s.major}</h3>
-              <p className="mt-3 text-sm md:text-base text-muted">{s.blurb}</p>
-              <div className="mt-4 flex flex-wrap gap-2 text-xs text-muted">
-                {s.tags.map((tag) => (
-                  <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="mt-6 text-xl md:text-3xl text-foreground/90">
+          <span>Our current members are majoring in </span>
+          <ClientOnly>
+            <TextType
+              as="span"
+              className="font-medium text-urb-maize"
+              text={[
+                "Urban Technology.",
+                "Computer Science.",
+                "Business.",
+                "Industrial and Operations Engineering.",
+                "Information Analysis.",
+                "Environment.",
+                "Economics.",
+                "Civil Engineering.",
+                "Mathematics.",
+                "UX Design.",
+              ]}
+              typingSpeed={55}
+              deletingSpeed={55}
+              pauseDuration={3000}
+              variableSpeed={{ min: 35, max: 75 }}
+              cursorCharacter="|"
+              textColors={["#FFCB05"]}
+              cursorClassName="ml-1"
+              showCursor
+              loop
+            />
+          </ClientOnly>
         </div>
-        <p className="mt-8 text-center text-sm text-muted">
-          ...and Computer Science, Environment, Economics, Civil Engineering, Mathematics, UX Design, and more.
-        </p>
       </section>
 
       {/* Closing CTA */}
@@ -205,12 +194,6 @@ export default function F26RushPage() {
         <FuzzyText baseIntensity={0.2} hoverIntensity={0.7} enableHover>
           RUSH URB
         </FuzzyText>
-        <Link
-          href="/about"
-          className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow"
-        >
-          Meet the team →
-        </Link>
       </div>
     </main>
   );

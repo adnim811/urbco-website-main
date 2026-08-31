@@ -8,7 +8,7 @@ export default function ProjectsPage() {
       <SectionHeading
         eyebrow="Select Work"
         title="Case studies, by domain"
-        subtitle="A sample of the pro-bono strategy, research, and product work our teams have delivered for clients across the urban tech landscape."
+        subtitle="A sample of the strategy, product, and engineering work our teams have delivered for clients across the urban tech landscape."
       />
 
       <div className="mt-12">
@@ -16,7 +16,7 @@ export default function ProjectsPage() {
       </div>
 
       <section className="mt-24 md:mt-28">
-        <SectionHeading eyebrow="Where We've Been" title="The project map" subtitle="Hover a city for project details." />
+        <SectionHeading eyebrow="Our Past Clients" title="The project map" subtitle="Hover a city for project details." />
         <div className="mt-8">
           <CityMap />
         </div>

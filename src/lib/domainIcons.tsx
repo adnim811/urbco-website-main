@@ -3,7 +3,7 @@ import type { Domain } from "@/data/caseStudies";
 
 export const domainIcons: Record<Domain, LucideIcon> = {
   Mobility: Bus,
-  Housing: Home,
+  "Real Estate": Home,
   Energy: Zap,
   "Policy & Data": Database,
 };

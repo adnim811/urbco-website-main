@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import { EyeClosed } from "lucide-react";
 
 export default function ApplyPage() {
   return (
@@ -6,16 +7,12 @@ export default function ApplyPage() {
       <SectionHeading
         eyebrow="F26 Rush"
         title="Apply to URB"
-        subtitle="Fill out the form below to get started — no need to leave the site. Questions? Reach us at urbumich@gmail.com."
       />
-      <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
-        <iframe
-          src="https://tally.so/embed/A7p7Xz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-          title="URB Consulting Application"
-          loading="lazy"
-          className="w-full"
-          style={{ height: "1200px", border: "none" }}
-        />
+      <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-10 text-center">
+        <EyeClosed className="mx-auto mb-4 h-10 w-10 text-urb-maize" aria-hidden />
+        <p className="text-xl md:text-2xl font-semibold text-white">
+          Come back soon to apply!
+        </p>
       </div>
     </main>
   );

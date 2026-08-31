@@ -56,10 +56,6 @@ export default function CityMap() {
           );
         })}
       </div>
-
-      <p className="mt-4 text-xs text-muted opacity-70">
-        Base map: state boundaries via Wikimedia Commons (CC BY-SA 3.0). Hover or tap a city for project details.
-      </p>
     </div>
   );
 }

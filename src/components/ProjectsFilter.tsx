@@ -73,10 +73,6 @@ export default function ProjectsFilter() {
           </button>
         </div>
       )}
-
-      <p className="mt-8 text-xs text-muted opacity-70">
-        * Placeholder case studies — real client engagements &amp; NDA-safe summaries coming soon.
-      </p>
     </div>
   );
 }
