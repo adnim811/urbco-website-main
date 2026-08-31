@@ -1,4 +1,4 @@
-export type Domain = "Mobility" | "Housing" | "Energy" | "Policy & Data";
+export type Domain = "Mobility" | "Real Estate" | "Energy" | "Policy & Data";
 
 export type Visualization = "node-network" | "icon-grid" | "house-grid";
 
@@ -16,7 +16,7 @@ export type CaseStudy = {
   visualization?: Visualization;
 };
 
-export const domains: Domain[] = ["Mobility", "Housing", "Energy", "Policy & Data"];
+export const domains: Domain[] = ["Mobility", "Real Estate", "Energy", "Policy & Data"];
 
 export const caseStudies: CaseStudy[] = [
   {
@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "adu-market-entry-gtm",
-    domain: "Housing",
+    domain: "Real Estate",
     city: "San Francisco, CA",
     title: "ADU Market-Entry GTM Strategy",
     description:
@@ -134,7 +134,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "onchain-real-estate-gtm",
-    domain: "Housing",
+    domain: "Real Estate",
     city: "Detroit, MI",
     title: "On-Chain Real Estate GTM Strategy",
     description:

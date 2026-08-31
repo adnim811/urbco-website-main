@@ -84,7 +84,7 @@ const resources = [
   },
   {
     name: "Urban Institute",
-    description: "Nonpartisan research on housing, transportation, and economic mobility in American cities.",
+    description: "Nonpartisan research on Real Estate, transportation, and economic mobility in American cities.",
     url: "https://www.urban.org/",
   },
   {

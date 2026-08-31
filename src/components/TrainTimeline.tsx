@@ -10,6 +10,7 @@ export type TrainStop = {
   title: string;
   time?: string;
   location?: string;
+  href?: string;
   description: string;
   emphasis?: boolean;
 };
@@ -262,7 +263,18 @@ function StopCard({ stop, align }: { stop: TrainStop; align: "left" | "right" })
         <p className="mt-1 text-sm text-muted">
           {stop.time}
           {stop.time && stop.location ? " · " : ""}
-          {stop.location}
+          {stop.href && stop.location ? (
+            <a
+              href={stop.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-white/30 underline-offset-2 hover:text-white transition-colors"
+            >
+              {stop.location}
+            </a>
+          ) : (
+            stop.location
+          )}
         </p>
       )}
       <p className="mt-2 text-sm md:text-base text-muted">{stop.description}</p>

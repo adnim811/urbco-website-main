@@ -1,51 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bus, Home as HomeIcon, Zap, Database, Landmark, Settings2, Code2, TrendingUp } from "lucide-react";
-import TextType from "@/components/TextType";
+import { Bus, Home as HomeIcon, Zap, Database } from "lucide-react";
 import Waves from "@/components/Waves";
 import ClientOnly from "@/components/ClientOnly";
 import LogoLoop from "@/components/LogoLoop";
 import SectionHeading from "@/components/SectionHeading";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import MajorCard from "@/components/MajorCard";
 import TestimonialCard from "@/components/TestimonialCard";
 
 const domainTags = [
   { label: "Mobility", icon: Bus },
-  { label: "Housing", icon: HomeIcon },
+  { label: "Real Estate", icon: HomeIcon },
   { label: "Energy", icon: Zap },
   { label: "Policy & Data", icon: Database },
-];
-
-const majors = [
-  {
-    label: "Poli Sci",
-    heading: "Policy meets product",
-    description:
-      "Translate zoning codes, transit funding, and regulatory context into strategy clients can actually act on.",
-    icon: Landmark,
-  },
-  {
-    label: "IOE",
-    heading: "Systems thinking, applied",
-    description:
-      "Run process mapping, ops analysis, and optimization frameworks against real infrastructure and logistics problems.",
-    icon: Settings2,
-  },
-  {
-    label: "Computer Science",
-    heading: "Ship, don't simulate",
-    description:
-      "Build lightweight tools, dashboards, and prototypes for clients who need something working, not just a slide.",
-    icon: Code2,
-  },
-  {
-    label: "Ross",
-    heading: "Strategy with a P&L lens",
-    description:
-      "Lead market entry, GTM, and financial modeling work for companies operating in the built environment.",
-    icon: TrendingUp,
-  },
 ];
 
 const testimonials = [
@@ -90,11 +57,11 @@ export default function Home() {
                 UMich&apos;s first urban tech consultancy
               </div>
               <h1 className="mt-4 text-4xl md:text-7xl font-semibold leading-[1.05] tracking-tight text-white">
-                Where cities <span className="text-urb-maize">meet</span> code, capital &amp; policy.
+                Where technology meets the <span className="text-urb-maize">real world</span>
               </h1>
               <p className="mt-5 text-base md:text-lg text-foreground/90">
-                URB Consulting delivers pro-bono strategy work for organizations building the
-                technology layer of cities: mobility, housing, energy, and the platforms that
+                URB Consulting delivers interdisciplinary work for organizations building the
+                technology layer of the real world: mobility, real estate, energy, and the platforms that
                 connect them.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -114,7 +81,7 @@ export default function Home() {
         </section>
 
         {/* Impact metrics */}
-        <section className="mx-auto max-w-7xl px-6 py-20 md:py-24">
+        <section hidden className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <SectionHeading eyebrow="Impact, to date" title="The route so far" />
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
@@ -167,7 +134,7 @@ export default function Home() {
               <div className="border-t border-white/10 my-4"></div>
               <p className="text-base md:text-lg text-foreground/90">
                 <span className="text-urb-maize">URB is the only consulting group operating in this niche! Apply if you want to develop transferrable skills 
-                  for any career, forge connections across both burgeoning industries and long-standing companies, and join a community that will make your college experinece meaningful!</span>
+                  for any career, forge connections across both burgeoning industries and legacy companies, and join a community that will make your college experience meaningful!</span>
               </p>
             </div>
           </div>
@@ -189,12 +156,12 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-3 text-sm text-muted">
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Go-To-Market</span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Web/App Development</span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Product Strategy</span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Data Analysis</span>
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">UX Design</span>
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Data Visualization</span>
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Policy Research</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Product Strategy</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Data Analysis</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Web/App Development</span>
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Market Entry</span>
               </div>
             </div>
@@ -247,9 +214,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Companies we've worked with */}
+        {/* Where we've been */}
         <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <SectionHeading eyebrow="Our Partners" title="Companies we've worked with" className="mb-12" />
+          <SectionHeading eyebrow="Our Partners" title="Where we've been" className="mb-12" />
           <div className="relative" style={{ height: '120px' }}>
             <LogoLoop
               logos={[
@@ -275,6 +242,7 @@ export default function Home() {
                 { src: "/images/company_logos/brookings.webp", alt: "Brookings" },
                 { src: "/images/company_logos/hanbury.png", alt: "Hanbury" },
                 { src: "/images/company_logos/gm.png", alt: "GM" },
+                { src: "/images/company_logos/amazon.png", alt: "Amazon" },
               ]}
               speed={80}
               direction="left"
@@ -289,69 +257,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Majors diversity */}
-        <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-6xl font-semibold tracking-tight">
-              We seek out prospective members from a wide variety of majors!
-            </h2>
-            <p className="text-base md:text-lg text-muted max-w-7xl">
-              Due to the interdisciplinary nature of urban technology, 
-              we value students with diverse educational backgrounds that bring unique skillsets and intuitions to their work. 
-              If you are interested in URB but don&apos;t think your major relates to our purpose and operations, we encourage you to still apply! 
-            </p>
-            <div className="text-xl md:text-3xl text-foreground/90">
-              <span>Our current members are majoring in </span>
-              <ClientOnly>
-                <TextType
-                  as="span"
-                  className="font-medium text-urb-maize"
-                  text={[
-                    "Urban Technology.",
-                    "Computer Science.",
-                    "Business.",
-                    "Industrial and Operations Engineering.",
-                    "Information Analysis.",
-                    "Environment.",
-                    "Economics.",
-                    "Civil Engineering.",
-                    "Mathematics.",
-                    "UX Design.",
-                  ]}
-                  typingSpeed={55}
-                  deletingSpeed={55}
-                  pauseDuration={3000}
-                  variableSpeed={{ min: 35, max: 75 }}
-                  cursorCharacter="|"
-                  textColors={["#FFCB05"]}
-                  cursorClassName="ml-1"
-                  showCursor
-                  loop
-                />
-              </ClientOnly>
-            </div>
-          </div>
-
-          <div className="mt-16">
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.15em] text-urb-maize">
-              <span className="h-2 w-2 rounded-full bg-urb-maize" />
-              Not an urban tech major? Good.
-            </div>
-            <h3 className="mt-3 text-2xl md:text-4xl font-semibold tracking-tight text-white">Built for interdisciplinary minds</h3>
-            <p className="mt-3 text-base md:text-lg text-muted max-w-2xl">
-              Every case team pulls from multiple majors. Here&apos;s what URB looks like from where you&apos;re standing.
-            </p>
-            <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {majors.map((major) => (
-                <MajorCard key={major.label} major={major} />
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Member testimonials */}
         <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <SectionHeading eyebrow="Member Voices" title="Hear from our members" />
+          <SectionHeading eyebrow="Testimonials" title="Hear from our members" />
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial) => (
               <TestimonialCard key={testimonial.name} testimonial={testimonial} />
@@ -366,7 +274,7 @@ export default function Home() {
               <Waves className="pointer-events-none" lineColor="rgba(255,255,255,0.15)" backgroundColor="transparent" />
             </ClientOnly>
             <h3 className="text-2xl md:text-4xl font-semibold tracking-tight">
-              Interested? <br /><br />Rush URB next semester :)
+              Interested? <br /><br />Join our F26 Rush :)
             </h3>
             <div className="mt-6">
               <Link href="/f26rush" className="inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-5 py-3 shadow-[0_0_0_1px_rgba(230,180,0,1)] hover:shadow-[0_0_0_3px_rgba(230,180,0,0.6)] transition-shadow">F26 Rush Page →</Link>
