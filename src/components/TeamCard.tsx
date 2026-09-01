@@ -5,6 +5,8 @@ export type TeamMember = {
   role: string;
   major: string;
   image?: string;
+  imagePosition?: string;
+  imageScale?: number;
   linkedin?: string;
 };
 
@@ -22,8 +24,17 @@ export default function TeamCard({ member }: { member: TeamMember }) {
   return (
     <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
       {member.image ? (
-        <div className="relative w-full h-64">
-          <Image src={member.image} alt={member.name} fill className="object-cover" />
+        <div className="relative w-full h-64 overflow-hidden">
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            className="object-cover"
+            style={{
+              objectPosition: member.imagePosition,
+              transform: member.imageScale ? `scale(${member.imageScale})` : undefined,
+            }}
+          />
         </div>
       ) : (
         <div className="w-full h-64 flex items-center justify-center bg-white/5">
