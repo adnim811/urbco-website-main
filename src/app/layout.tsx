@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import MobileNav from "@/components/MobileNav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -43,12 +44,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}>
         <header className="sticky top-0 z-50 bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-white/10">
-          <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
-              <div className="h-15 w-15 rounded-md overflow-hidden relative">
+              <div className="h-12 w-12 sm:h-15 sm:w-15 rounded-md overflow-hidden relative">
                 <Image src="/images/LogoFinal_normal_circle.png" alt="URB logo" fill className="object-contain p-1" />
               </div>
-              <span className="text-3xl font-semibold tracking-tight">URB Consulting</span>
+              <span className="text-xl sm:text-3xl font-semibold tracking-tight">URB Consulting</span>
             </Link>
             <div className="flex items-center gap-8">
               <nav className="hidden md:flex items-center gap-8 text-sm text-muted">
@@ -57,7 +58,8 @@ export default function RootLayout({
                 <Link href="/f26rush" className="hover:text-foreground transition-colors">F26 Rush</Link>
                 <Link href="/about" className="hover:text-foreground transition-colors">About Us</Link>
               </nav>
-              <Link href="/apply" className="hidden sm:inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-4 py-2 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">Apply Now →</Link>
+              <Link href="/apply" className="hidden md:inline-flex items-center rounded-full bg-urb-maize text-urb-blue font-medium px-4 py-2 shadow-[0_0_0_1px_rgba(255,203,5,0.3)] hover:shadow-[0_0_0_3px_rgba(255,203,5,0.2)] transition-shadow">Apply Now →</Link>
+              <MobileNav />
             </div>
           </div>
         </header>
