@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bus, Home as HomeIcon, Zap, Database } from "lucide-react";
+import { Bus, Home as HomeIcon, Zap, Plus } from "lucide-react";
 import Waves from "@/components/Waves";
 import ClientOnly from "@/components/ClientOnly";
 import LogoLoop from "@/components/LogoLoop";
@@ -12,7 +12,7 @@ const domainTags = [
   { label: "Mobility", icon: Bus },
   { label: "Real Estate", icon: HomeIcon },
   { label: "Energy", icon: Zap },
-  { label: "Policy & Data", icon: Database },
+  { label: "And More", icon: Plus },
 ];
 
 const testimonials = [
@@ -216,44 +216,62 @@ export default function Home() {
 
         {/* Where we've been */}
         <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <SectionHeading eyebrow="Our Partners" title="Where we've been" className="mb-12" />
-          <div className="relative" style={{ height: '120px' }}>
-            <LogoLoop
-              logos={[
-                { src: "/images/company_logos/microsoft.png", alt: "Microsoft" },
-                { src: "/images/company_logos/bofa.png", alt: "BofA" },
-                { src: "/images/company_logos/adobe.png", alt: "Adobe" },
-                { src: "/images/company_logos/accenture.png", alt: "Accenture" },
-                { src: "/images/company_logos/baringa.png", alt: "Baringa" },
-                { src: "/images/company_logos/fti.jpg", alt: "FTI" },
-                { src: "/images/company_logos/datadog.svg", alt: "Datadog" },
-                { src: "/images/company_logos/colliers.png", alt: "Colliers" },
-                { src: "/images/company_logos/lucid.jpg", alt: "Lucid" },
-                { src: "/images/company_logos/coinbase.jpg", alt: "Coinbase" },
-                { src: "/images/company_logos/smbc.webp", alt: "SMBC" },
-                { src: "/images/company_logos/kpmg.webp", alt: "KPMG" },
-                { src: "/images/company_logos/ally.png", alt: "Ally" },
-                { src: "/images/company_logos/ubs.png", alt: "UBS" },
-                { src: "/images/company_logos/mcdonalds.webp", alt: "McDonald's" },
-                { src: "/images/company_logos/qualcomm.png", alt: "Qualcomm" },
-                { src: "/images/company_logos/aecom.jpg", alt: "AECOM" },
-                { src: "/images/company_logos/southwest.jpg", alt: "Southwest" },
-                { src: "/images/company_logos/brookfield.jpg", alt: "Brookfield" },
-                { src: "/images/company_logos/brookings.webp", alt: "Brookings" },
-                { src: "/images/company_logos/hanbury.png", alt: "Hanbury" },
-                { src: "/images/company_logos/gm.png", alt: "GM" },
-                { src: "/images/company_logos/amazon.png", alt: "Amazon" },
-              ]}
-              speed={80}
-              direction="left"
-              logoHeight={80}
-              gap={60}
-              hoverSpeed={20}
-              fadeOut
-              fadeOutColor="#070A0F"
-              scaleOnHover
-              ariaLabel="Companies and organizations we've worked with"
-            />
+          <SectionHeading eyebrow="Our Journeys" title="Where we've been" className="mb-12" />
+          <div className="space-y-8">
+            <div className="relative" style={{ height: '120px' }}>
+              <LogoLoop
+                logos={[
+                  { src: "/images/company_logos/microsoft.png", alt: "Microsoft" },
+                  { src: "/images/company_logos/bofa.png", alt: "BofA" },
+                  { src: "/images/company_logos/adobe.png", alt: "Adobe" },
+                  { src: "/images/company_logos/accenture.png", alt: "Accenture" },
+                  { src: "/images/company_logos/baringa.png", alt: "Baringa" },
+                  { src: "/images/company_logos/fti.jpg", alt: "FTI" },
+                  { src: "/images/company_logos/datadog.svg", alt: "Datadog" },
+                  { src: "/images/company_logos/colliers.png", alt: "Colliers" },
+                  { src: "/images/company_logos/lucid.jpg", alt: "Lucid" },
+                  { src: "/images/company_logos/coinbase.jpg", alt: "Coinbase" },
+                  { src: "/images/company_logos/smbc.webp", alt: "SMBC" },
+                  { src: "/images/company_logos/kpmg.webp", alt: "KPMG" },
+                ]}
+                speed={80}
+                direction="left"
+                logoHeight={80}
+                gap={60}
+                hoverSpeed={20}
+                fadeOut
+                fadeOutColor="#070A0F"
+                scaleOnHover
+                ariaLabel="Companies and organizations we've worked with"
+              />
+            </div>
+            <div className="relative" style={{ height: '120px' }}>
+              <LogoLoop
+                logos={[
+                  { src: "/images/company_logos/ally.png", alt: "Ally" },
+                  { src: "/images/company_logos/ubs.jpg", alt: "UBS" },
+                  { src: "/images/company_logos/mcdonalds.webp", alt: "McDonald's" },
+                  { src: "/images/company_logos/qualcomm.png", alt: "Qualcomm" },
+                  { src: "/images/company_logos/aecom.jpg", alt: "AECOM" },
+                  { src: "/images/company_logos/southwest.jpg", alt: "Southwest" },
+                  { src: "/images/company_logos/brookfield.jpg", alt: "Brookfield" },
+                  { src: "/images/company_logos/brookings.png", alt: "Brookings" },
+                  { src: "/images/company_logos/hanbury.png", alt: "Hanbury" },
+                  { src: "/images/company_logos/gm.png", alt: "GM" },
+                  { src: "/images/company_logos/amazon.webp", alt: "Amazon" },
+                  { src: "/images/company_logos/dicks.jpg", alt: "Dick's" },
+                ]}
+                speed={80}
+                direction="right"
+                logoHeight={80}
+                gap={60}
+                hoverSpeed={-20}
+                fadeOut
+                fadeOutColor="#070A0F"
+                scaleOnHover
+                ariaLabel="More companies and organizations we've worked with"
+              />
+            </div>
           </div>
         </section>
 

@@ -8,6 +8,8 @@ const executiveBoard: TeamMember[] = [
     role: "President",
     major: "Urban Technology",
     image: "/images/about_pics/headshots/tyler.jpg",
+    imagePosition: "center 25%",
+    imageScale: 1.15,
     linkedin: "https://www.linkedin.com/in/tspitzerwu/",
   },
   {
@@ -15,6 +17,7 @@ const executiveBoard: TeamMember[] = [
     role: "VP Marketing",
     major: "Information Analysis & HCI",
     image: "/images/about_pics/headshots/joyce.jpeg",
+    imagePosition: "center 25%",
     linkedin: "https://www.linkedin.com/in/joyce-kim-341176378/",
   },
   {
@@ -22,6 +25,7 @@ const executiveBoard: TeamMember[] = [
     role: "VP Recruitment",
     major: "Industrial and Operations Engineering",
     image: "/images/about_pics/headshots/arjun.jpeg",
+    imagePosition: "center 25%",
     linkedin: "https://www.linkedin.com/in/rjunsuri/",
   },
   {
@@ -43,6 +47,7 @@ const executiveBoard: TeamMember[] = [
     role: "VP Client Relations",
     major: "Computer Science + Economics",
     image: "/images/about_pics/headshots/andy.jpeg",
+    imagePosition: "center 25%",
     linkedin: "https://www.linkedin.com/in/yanhang-liang/",
   },
   {
@@ -50,6 +55,7 @@ const executiveBoard: TeamMember[] = [
     role: "VP External Affairs",
     major: "Information Analysis",
     image: "/images/about_pics/headshots/dana.jpg",
+    imagePosition: "center 25%",
     linkedin: "https://www.linkedin.com/in/dana-clocker/",
   },
   {
@@ -129,9 +135,6 @@ export default function AboutPage() {
             <TeamCard key={member.name} member={member} />
           ))}
         </div>
-        <p className="mt-6 text-xs text-muted opacity-70">
-          * Executive board pictured — full member roster and profiles coming soon.
-        </p>
       </section>
 
       {/* Resources */}

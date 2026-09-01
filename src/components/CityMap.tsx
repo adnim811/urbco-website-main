@@ -33,7 +33,7 @@ export default function CityMap() {
               onClick={() => setActiveId((id) => (id === study.id ? null : study.id))}
               className="group absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
               style={{ left: `${study.mapX}%`, top: `${study.mapY}%` }}
-              aria-label={`${study.title} — ${study.city}`}
+              aria-label={`${study.title} for ${study.partner} — ${study.city}`}
             >
               <span
                 className={`block h-3 w-3 rounded-full bg-urb-maize ring-4 transition-all ${
@@ -49,7 +49,9 @@ export default function CityMap() {
                     {study.domain}
                   </div>
                   <div className="mt-1 text-sm font-semibold text-white leading-snug">{study.title}</div>
-                  <div className="mt-1 text-xs text-muted">{study.city}</div>
+                  <div className="mt-1 text-xs text-muted">
+                    {study.partner} · {study.city}
+                  </div>
                 </div>
               )}
             </button>

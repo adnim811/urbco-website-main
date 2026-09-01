@@ -3,6 +3,7 @@ import { domainIcons } from "@/lib/domainIcons";
 import NodeNetworkViz from "@/components/visualizations/NodeNetworkViz";
 import IconGridViz from "@/components/visualizations/IconGridViz";
 import HouseGridViz from "@/components/visualizations/HouseGridViz";
+import { ExternalLink } from "lucide-react";
 
 export default function CaseStudyCard({ study }: { study: CaseStudy }) {
   const Icon = domainIcons[study.domain];
@@ -14,6 +15,18 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
           {study.domain}
         </span>
         <span className="text-muted">{study.city}</span>
+      </div>
+
+      <div className="mt-3 text-xs">
+        <a
+          href={study.partnerUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 font-semibold text-white hover:text-urb-maize transition-colors"
+        >
+          {study.partner}
+          <ExternalLink className="h-3 w-3" aria-hidden="true" />
+        </a>
       </div>
 
       {study.visualization && (
