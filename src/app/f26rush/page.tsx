@@ -136,9 +136,12 @@ export default function F26RushPage() {
           >
             Interest Form
           </Link>
-          <span className="inline-flex cursor-not-allowed items-center rounded-full bg-white/10 text-white/50 font-medium px-5 py-3 ring-1 ring-white/10">
-            Application opening soon!
-          </span>
+          <Link
+            href="/apply"
+            className="inline-flex items-center rounded-full bg-white/10 text-white font-medium px-5 py-3 ring-1 ring-white/20 hover:bg-white/15 hover:ring-white/30 transition-colors"
+          >
+            Apply Now →
+          </Link>
         </div>
       </div>
 
