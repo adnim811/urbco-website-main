@@ -138,7 +138,7 @@ export default function F26RushPage() {
           </Link>
           <Link
             href="/apply"
-            className="inline-flex items-center rounded-full bg-white/10 text-white font-medium px-5 py-3 ring-1 ring-white/20 hover:bg-white/15 hover:ring-white/30 transition-colors"
+            className="inline-flex items-center rounded-full bg-transparent text-urb-maize font-medium px-5 py-3 ring-1 ring-urb-maize hover:bg-urb-maize/10 transition-colors"
           >
             Apply Now →
           </Link>
