@@ -255,7 +255,7 @@ export default function Home() {
                   { src: "/images/company_logos/aecom.jpg", alt: "AECOM" },
                   { src: "/images/company_logos/southwest.jpg", alt: "Southwest" },
                   { src: "/images/company_logos/brookfield.jpg", alt: "Brookfield" },
-                  { src: "/images/company_logos/brookings.png", alt: "Brookings" },
+                  { src: "/images/company_logos/brookings.webp", alt: "Brookings" },
                   { src: "/images/company_logos/hanbury.png", alt: "Hanbury" },
                   { src: "/images/company_logos/gm.png", alt: "GM" },
                   { src: "/images/company_logos/amazon.webp", alt: "Amazon" },
