@@ -69,34 +69,34 @@ const executiveBoard: TeamMember[] = [
 
 const resources = [
   {
-    name: "Bloomberg Cities",
-    description: "Research, tools, and stories on how city halls are using data and innovation to improve services.",
-    url: "https://bloombergcities.jhu.edu/",
+    name: "Centre for Urban Transformation",
+    description: "The World Economic Forum's hub for turning cities into engines of innovation and growth.",
+    url: "https://centres.weforum.org/centre-for-urban-transformation/home",
   },
   {
-    name: "NACTO",
-    description: "The National Association of City Transportation Officials — guidance and standards for urban streets.",
-    url: "https://nacto.org/",
+    name: "Sidewalk Labs",
+    description: "Alphabet's urban-innovation company, and the birthplace of urban tech.",
+    url: "https://en.wikipedia.org/wiki/Sidewalk_Labs",
   },
   {
-    name: "Sidewalk Talk (Sidewalk Labs)",
-    description: "Essays and case studies on the technology and design of cities from the former Alphabet urban-innovation team.",
-    url: "https://www.sidewalklabs.com/",
+    name: "B.S. in Urban Technology",
+    description: "Taubman College's degree at the intersection of cities, design, and technology.",
+    url: "https://taubmancollege.umich.edu/academics/urban-and-regional-planning/bachelor-of-science-in-urban-technology/",
   },
   {
-    name: "Smart Cities Dive",
-    description: "Daily news covering smart infrastructure, mobility, and civic technology.",
-    url: "https://www.smartcitiesdive.com/",
+    name: "Bloomberg CityLab",
+    description: "Reporting on how cities work, from housing and transit to climate and design.",
+    url: "https://www.bloomberg.com/citylab",
   },
   {
-    name: "Urban Institute",
-    description: "Nonpartisan research on Real Estate, transportation, and economic mobility in American cities.",
-    url: "https://www.urban.org/",
+    name: "MIT Senseable City Lab",
+    description: "Research on how sensors, data, and design reshape cities.",
+    url: "https://senseable.mit.edu/",
   },
   {
-    name: "Streetsblog",
-    description: "News and advocacy on sustainable transportation and street design.",
-    url: "https://streetsblog.org/",
+    name: "C40 Cities",
+    description: "A network of nearly 100 cities collaborating on climate action and urban transformation.",
+    url: "https://www.c40.org/",
   },
 ];
 
